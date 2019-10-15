@@ -1,0 +1,54 @@
+# Create environment
+## Unix
+python3 -m venv venv
+
+## Windows
+py -3 -m venv venv
+
+# Activate the environment
+## Unix
+. venv/bin/activate
+
+## Windows
+venv\Scripts\activate
+
+# Install Flask
+pip install Flask
+
+# Local adress
+localhost:5000
+
+# Launch
+(venv) $ export FLASK_APP=microblog.py
+(venv) $ flask run
+
+# Flask-WTF
+(venv) $ pip install flask-wtf
+
+# Py DotEnv
+(venv) $ pip install python-dotenv
+
+# Flask-SQLAlchemy for DB
+(venv) $ pip install flask-sqlalchemy
+
+# Flask-Migrate
+(venv) $ pip install flask-migrate
+
+# Database
+(venv) $ flask db init
+
+# Generate migration script with message
+(venv) $ flask db migrate -m "users table"
+# Apply changes to the database
+(venv) $ flask db upgrade
+
+# Add user to db
+>>> u = User(username='susan', email='susan@example.com')
+>>> db.session.add(u)
+>>> db.session.commit()
+
+# Flask shell with app context
+(venv) $ flask shell
+
+# Flask-Login
+(venv) $ pip install flask-login
